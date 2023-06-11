@@ -12,9 +12,6 @@ const createNoteTable = async (req, res) => {
             )
         `)
 
-        // updatedAt TIMESTAMP DEFAULT now() ON UPDATE now() NOT NULL 
-
-        console.log(result);
         return res.status(201).json({ status: true, message: "Notes Table created Successfully " })
 
     } catch (err) {
@@ -28,7 +25,6 @@ const createNoteTable = async (req, res) => {
 const createNote = async (req, res) => {
     try {
 
-        console.log(req.body);
         const { title, noteText, date } = req.body
         const result = await pool.query(`
             INSERT INTO notes(title, noteText, date)
@@ -36,9 +32,6 @@ const createNote = async (req, res) => {
             `)
 
 
-        // updatedAt TIMESTAMP DEFAULT now() ON UPDATE now() NOT NULL 
-
-        console.log(result);
         return res.status(201).json({ status: true, message: "Note created Successfully " })
 
     } catch (err) {
@@ -50,17 +43,12 @@ const createNote = async (req, res) => {
 const getNotes = async (req, res) => {
     try {
 
-        console.log(req.body);
         const result = await pool.query(`
             SELECT * 
             FROM notes
             `)
 
-
-        // updatedAt TIMESTAMP DEFAULT now() ON UPDATE now() NOT NULL 
-
-        console.log(result[0]);
-        return res.status(201).json({ status: true, data: result[0] })
+        return res.status(200).json({ status: true, data: result[0] })
 
     } catch (err) {
         return res.status(500).send({ status: false, message: err.message });
@@ -72,16 +60,12 @@ const deleteNote = async (req, res) => {
 
         
         const result = await pool.query(`
-            DELETE
+            DELETEcd n
             FROM notes
             WHERE id = ${req.query.id}
             `)
 
-
-        // updatedAt TIMESTAMP DEFAULT now() ON UPDATE now() NOT NULL 
-
-        console.log(result[0]);
-        return res.status(201).json({ status: true, data: result[0] })
+        return res.status(200).json({ status: true, data: result[0] })
 
     } catch (err) {
         return res.status(500).send({ status: false, message: err.message });

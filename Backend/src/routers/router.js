@@ -5,10 +5,10 @@ const { createNoteTable, createNote, getNotes, deleteNote } = require('../contro
 
 router.post('/user/createNoteTable', createNoteTable)
 
-
 router.post('/user/createNote', createNote)
 
 router.get('/user/getNotes', getNotes)
+
 router.delete('/user/deleteNote', deleteNote)
 
 
