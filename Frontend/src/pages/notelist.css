@@ -1,0 +1,103 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(47, 102, 127);
+
+}
+
+nav {
+    background-color: rgb(47, 102, 127);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new_note {
+    width: 60%;
+    height: 60px;
+    background-color: rgb(250, 250, 250);
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+.active_new_note {
+    width: 60%;
+    height: 60px;
+    background-color: rgb(250, 250, 250);
+    margin: auto;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+
+.new_note_box {
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin: auto;
+    background-color: rgb(240, 240, 240);
+}
+
+.btns {
+    background-color: rgb(155, 240, 17);
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+}
+
+.btns button {
+    font-size: small;
+    padding: 5px;
+}
+
+.heading {
+    height: 40px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.heading input {
+    height: 40px;
+    margin: 0 auto;
+    font-family: 'Courgette', cursive;
+    min-width: 90%;
+}
+
+.new_textarea {
+    width: 100%;
+    min-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    font-family: 'Courgette', cursive;
+    margin: 10px 0;
+}
+
+.new_textarea textarea {
+    background-color: rgb(250, 250, 250);
+    margin: 0 auto;
+    min-width: 90%;
+    height: 300px;
+}
+
+
+.notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(85, 131, 139);
+    padding: 20px;
+}

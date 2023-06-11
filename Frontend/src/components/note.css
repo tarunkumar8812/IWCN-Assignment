@@ -1,0 +1,76 @@
+.note_box {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(161, 224, 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    position: relative;
+    padding: 5px 0;
+    margin: 10px 10px;
+    min-height: 120px;
+    height: 120px;
+}
+
+
+.note_box:hover {
+    height: fit-content;
+}
+
+.note_header input {
+    font-weight: 600;
+    height: 30px;
+    min-width: 200px;
+    background-color: transparent;
+    max-width: 200px;
+    font-weight: 600;
+    font-family: 'Courgette', cursive;
+
+}
+
+.note_textarea {
+    overflow: hidden;
+    margin: 0 5px;
+    background-color: rgb(242, 242, 199);
+}
+
+textarea {
+    border: none;
+    outline: none;
+    min-width: 190px;
+    max-width: 190px;
+    min-height: 50px;
+    overflow-y: hidden;
+    background-color: transparent;
+    /* padding: 5px; */
+    margin: 5px;
+    resize: none;
+    font-family: 'Courgette', cursive;
+ 
+}
+
+
+
+.note_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 0 10px; */
+    padding: 0 10px;
+    font-size: small;
+    height: 20px;
+    background-color: transparent;
+}
+
+
+.delete_Img {
+
+    width: 15px;
+    height: 15px;
+}
+
+.delete_Img:hover {
+
+    cursor: pointer;
+}
